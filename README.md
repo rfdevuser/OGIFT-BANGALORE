@@ -1,1 +1,1 @@
-# OGIFT-BANGALORE
+npm i sharp for image optimization
