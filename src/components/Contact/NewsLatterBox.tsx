@@ -2,7 +2,13 @@
 import { ADD_STUDENT_CONTACT_MUTATION } from '@/utils/gql/GQL_MUTATIONS';
 import { useMutation } from '@apollo/client';
 import { useState } from 'react';
-
+const LoadingSpinner = () => {
+  return (
+    <div className="fixed top-0 left-0 z-50 w-screen h-screen flex justify-center items-center bg-black bg-opacity-50">
+      <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+    </div>
+  );
+};
 const NewsLatterBox = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -45,6 +51,7 @@ const NewsLatterBox = () => {
   
   return (
     <div className="relative z-10 rounded-sm bg-transparent p-8 shadow-three dark:bg-transparent sm:p-11 lg:p-8 xl:p-11">
+       {loading && <LoadingSpinner />} 
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white text-center">
         Contact us to learn more
       </h3>

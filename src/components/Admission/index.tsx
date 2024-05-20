@@ -4,11 +4,15 @@ import { useMutation } from '@apollo/client';
 import { useState } from 'react';
 import { FormInput } from '@/utils/constants/types'; // Adjust the import path based on your project structure
 import Image from 'next/image';
-// import { useState } from 'react';
-// import { useMutation } from '@apollo/client';
-// import { SUBMIT_FORM_MUTATION } from '@/utils/gql/GQL_MUTATIONS';
 
 const Contact = () => {
+  const LoadingSpinner = () => {
+    return (
+      <div className="fixed top-0 left-0 z-50 w-screen h-screen flex justify-center items-center bg-black bg-opacity-50">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+      </div>
+    );
+  };
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,20 +33,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log( formData)
-      const { data } = await submitForm({  variables: {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        phoneNumber: formData.phoneNumber,
-        email: formData.email,
-        courseInterest: formData.courseInterest,
-        startDate: formData.startDate,
-        state: formData.state,
-        currentStatus: formData.currentStatus
-      } });
-      
-      console.log(loading);
-      console.log(error);
+      const { data } = await submitForm({ variables: formData });
       console.log('Form submitted successfully:', data.submitForm);
       alert('Form submitted successfully!');
       setFormData({
@@ -60,7 +51,6 @@ const Contact = () => {
       alert('Error submitting form. Please try again later.');
     }
   };
-  
 
   const courses = ['Diploma in Fashion Designing', 'Advance Diploma in Fashion Designing', 'Vocational Course in Garment making & Tailoring', 'Vocational Embroidery & Craft Course', 'Advance Vocational Course in Garment making & Tailoring'];
   const indianStates = [
@@ -69,11 +59,12 @@ const Contact = () => {
     'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 
     'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'
   ];
-  const currentStatusOptions = ['Student', 'Homemaker', 'Professional' , 'Other'];
+  const currentStatusOptions = ['Student', 'Homemaker', 'Professional', 'Other'];
 
   return (
     <section id="contact" className="overflow-hidden py-2 md:py-2 lg:py-2">
       <div className="container">
+      {loading && <LoadingSpinner />}
         <div className="-mx-4 flex flex-wrap mt-10">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]" data-wow-delay=".15s">
@@ -83,7 +74,8 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Our support team will get back to you ASAP via email.
               </p>
-              <form onSubmit={handleSubmit}>
+            
+                <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -166,9 +158,6 @@ const Contact = () => {
               <div className='mt-6'>
                 <Image src="/images/placement/internship.png" alt="Internship Poster" width={400} height={500} />
               </div>
-              {/* <div className='mt-10'>
-                <Image src="/images/admission/admissionGraph.jpg" alt="Admission Poster" width={400} height={500} />
-              </div> */}
             </div>
           </div>
           
