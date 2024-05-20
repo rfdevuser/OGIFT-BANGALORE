@@ -1,0 +1,23 @@
+.heading-container {
+  position: relative;
+  height: 100px; /* Adjust height as needed */
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+.current-heading {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.next-heading {
+  opacity: 0;
+  transform: translateY(100%);
+}

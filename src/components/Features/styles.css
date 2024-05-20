@@ -1,0 +1,72 @@
+/* CampusLife.module.css */
+
+.campusLifeSection {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+.textContainer {
+  flex: 1;
+  text-align: right;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.campusImage {
+  max-width: 50%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slideIn {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* CSS */
+.fade-in-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.grid-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Add this line */
+}
+
+.grid-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s, transform 0.5s;
+}
