@@ -51,24 +51,24 @@ const menuData: Menu[] = [
         path: "/advance-diploma",
         newTab: false,
       },
-      {
-        id: 33,
-        title: "Vocational Course in Garment making & Tailoring ",
-        path: "/vocational",
-        newTab: false,
-      },
-      {
-        id: 34,
-        title: " Vocational Embroidery & Craft Course ",
-        path: "/vocational_embroidery",
-        newTab: false,
-      },
-      {
-        id: 35,
-        title: "Advance Vocational Course in Garment making & Tailoring ",
-        path: "/advance.vocational",
-        newTab: false,
-      }
+      // {
+      //   id: 33,
+      //   title: "Vocational Course in Garment making & Tailoring ",
+      //   path: "/vocational",
+      //   newTab: false,
+      // },
+      // {
+      //   id: 34,
+      //   title: " Vocational Embroidery & Craft Course ",
+      //   path: "/vocational_embroidery",
+      //   newTab: false,
+      // },
+      // {
+      //   id: 35,
+      //   title: "Advance Vocational Course in Garment making & Tailoring ",
+      //   path: "/advance.vocational",
+      //   newTab: false,
+      // }
       
     ]
   },
