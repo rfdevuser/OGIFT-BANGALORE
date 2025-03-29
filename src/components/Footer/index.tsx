@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
             <p></p><h1>Contact Counsellor: +91 90369 28799</h1>
             </div>
           <div className="mx-auto sm:mx-30 md:mx-30"> 
-            <Link href='https://api.whatsapp.com/send/?phone=%2B919036928800&text=Hi+Team%2C+is+there+any+related+service+available+%3F&type=phone_number&app_absent=0'>
+            <Link href='https://api.whatsapp.com/send/?phone=%2B919036928799&text=Hi+Team%2C+is+there+any+related+service+available+%3F&type=phone_number&app_absent=0'>
             <button className="border text-gray-50  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-full rounded-md bg-neutral-800 p-2  font-extrabold hover:bg-[#86198f] mt-10 text-center ">
 
   <div className="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
