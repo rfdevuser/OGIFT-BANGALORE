@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
             <p>4th Main Vinayakanagar,</p>
             <p>Bengaluru 17, Karnataka</p>
             <h1>Email: admissions@ogiftbangalore.com</h1>
-            <p></p><h1>Contact: +91 9036928800</h1>
+            <p></p><h1>Contact Counsellor: +91 90369 28799</h1>
             </div>
           <div className="mx-auto sm:mx-30 md:mx-30"> 
             <Link href='https://api.whatsapp.com/send/?phone=%2B919036928800&text=Hi+Team%2C+is+there+any+related+service+available+%3F&type=phone_number&app_absent=0'>
