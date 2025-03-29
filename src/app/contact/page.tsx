@@ -51,7 +51,7 @@ const ContactPage = () => {
           <p>4th Main Vinayakanagar ,</p>
           <p>Bengaluru, Karnataka 560017</p>
           <h1>Email: admissions@ogiftbangalore.com</h1>
-            <p></p><h1>Contact: +91 9036928800</h1>
+            <p></p><h1>Contact Counsellor : +91 90369 28799</h1>
         </div>
       </div>
     </div>
