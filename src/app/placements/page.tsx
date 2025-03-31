@@ -50,7 +50,7 @@ const BlogSidebarPage = () => {
 
                     className="relative z-10 mb-8 text-xl   shadow-2xl text-black dark:text-white sm:text-xl  border-2 border-purple-900"
                   >
-                 <a href="www.rakhisfashions.in><img width="200px" height="200px" src="/rf.jpeg"/></a>Affiliated to Rakhis Fashions, A Leading Designing and Manufacturing Company.
+                 <a href="https://www.rakhisfashions.in"><img width="200px" height="200px" src="/rf.jpeg"/></a>Affiliated to Rakhis Fashions, A Leading Designing and Manufacturing Company.
                  
                   </h1>
                  
