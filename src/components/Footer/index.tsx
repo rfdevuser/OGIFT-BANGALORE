@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                 <strong> Diploma in Fashion Designing</strong>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/vocational"
                   className="text-sm text-black duration-300 hover:text-primary dark:text-black dark:hover:text-dark"
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 >
               <strong>Vocational Embroidery & Craft Course</strong> 
                 </Link>
-              </li>
+              </li> */}
               {/* Add more links as needed */}
             </ul>
           </div>
