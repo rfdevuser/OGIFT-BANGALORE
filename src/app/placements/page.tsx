@@ -72,15 +72,18 @@ const BlogSidebarPage = () => {
           <div className="mx-auto max-w-[900px] text-center  bg-transparent">
     <h1 className="mb-5 text-3xl-[#4a044e] bg-transparent mx-auto z-100   text-black dark:text-white sm:text-4xl  md:text-5xl ">
         𝑶𝒖𝒓 𝑷𝒓𝒐𝒎𝒊𝒔𝒆: 𝑼𝒏𝒍𝒐𝒄𝒌𝒊𝒏𝒈 𝒀𝒐𝒖𝒓 𝑭𝒖𝒕𝒖𝒓𝒆
+        Affiliated to Rakhis Fashions Bangalore, A Leading Designing and Manufacturing House
                   </h1>
+                  
                   </div>
-          <ImagePage/>
+                <ImagePage/>
           <div className="w-full md:w-6/12 lg:w-12/12 py-5 text-center lg:hidden">
             <div className="flex flex-col">
               {cardComponentData?.map((data, index) => (
                 <CardComponent key={index} {...data} />
               ))}
             </div>
+           
           </div>
         </div>
       </section>
