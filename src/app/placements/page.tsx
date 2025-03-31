@@ -40,8 +40,23 @@ const BlogSidebarPage = () => {
                     className="relative z-10 mb-8 text-3xl   shadow-2xl text-black dark:text-white sm:text-4xl  border-2 border-purple-900"
                   >
                  Placement Support at OGIFT
+                
                   </h1>
+                 
                 </div>
+                <div className="container mx-auto px-4 pt-10 lg:px-8 lg:pt-5 xl:max-w-6xl text-center bg-white dark:bg-dark">
+                
+                  <h1
+
+                    className="relative z-10 mb-8 text-xl   shadow-2xl text-black dark:text-white sm:text-xl  border-2 border-purple-900"
+                  >
+                 <img width="200px" height="200px"src="/rf.jpeg"/>Affiliated to Rakhis Fashions, A Leading Designing and Manufacturing House.
+                
+                  </h1>
+                 
+                 
+                </div>
+                <h2></h2>
                 <p className="mb-10 text-black font-medium leading-relaxed bg-white dark:bg-gray-700 text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   At Onati Global Institute of Fashion Technology, we are committed to not only providing top-notch education but also ensuring that our students have the support they need to kickstart their careers in the fashion industry. Our comprehensive placement support services are designed to connect students with exciting job opportunities and internships, paving the way for a successful and fulfilling career journey.
                 </p>
