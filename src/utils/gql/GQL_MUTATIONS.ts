@@ -32,7 +32,14 @@ export const ADD_ADMISSION_MUTATION = gql`
     $courseInterest: String!,
     $startDate: String!,
     $state: String!,
-    $currentStatus: String!
+    $currentStatus: String!,
+    $fathers_name:String!,
+    $mothers_name:String!,
+    $current_address:String!,
+    $aadhar_number:String!,
+    $religion:String!,
+    $gender:String!,
+    $mother_tongue:String!,
   ) {
     addadmissionmutation(
       input: {
@@ -43,7 +50,14 @@ export const ADD_ADMISSION_MUTATION = gql`
         courseInterest: $courseInterest,
         startDate: $startDate,
         state: $state,
-        currentStatus: $currentStatus
+        currentStatus: $currentStatus,
+        fathers_name:$fathers_name,
+        mothers_name:$mothers_name,
+        current_address:$current_address,
+        aadhar_number:$aadhar_number,
+        religion:$religion,
+        gender:$gender,
+        mother_tongue:$mother_tongue
       }
     ) {
       testoutput
