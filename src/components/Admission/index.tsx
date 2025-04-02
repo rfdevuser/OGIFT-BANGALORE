@@ -21,7 +21,14 @@ const Contact = () => {
     courseInterest: '',
     startDate: '',
     state: '',
-    currentStatus: ''
+    currentStatus: '',
+    fathers_name:'',
+    mothers_name:'',
+    aadhar_number:'',
+    current_address:'',
+    religion:'',
+    gender:'',
+    mother_tongue:''
   });
 
   const handleChange = (e) => {
@@ -44,7 +51,14 @@ const Contact = () => {
         courseInterest: '',
         startDate: '',
         state: '',
-        currentStatus: ''
+        currentStatus: '',
+        fathers_name:'',
+        mothers_name:'',
+        current_address:'',
+        aadhar_number:'',
+        religion:'',
+        gender:'',
+        mother_tongue:''
       });
     } catch (error) {
       console.error('Form submission failed:', error);
@@ -52,7 +66,11 @@ const Contact = () => {
     }
   };
 
-  const courses = ['Diploma in Fashion Designing', 'Advance Diploma in Fashion Designing', 'Vocational Course in Garment making & Tailoring', 'Vocational Embroidery & Craft Course', 'Advance Vocational Course in Garment making & Tailoring'];
+  const courses = ['Diploma in Fashion Designing', 'Advance Diploma in Fashion Designing', 
+    // 'Vocational Course in Garment making & Tailoring', 
+    // 'Vocational Embroidery & Craft Course', 
+    // 'Advance Vocational Course in Garment making & Tailoring'
+  ];
   const indianStates = [
     'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 
     'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 
@@ -140,8 +158,56 @@ const Contact = () => {
                       </select>
                     </div>
                   </div>
+                  
+                  <div className="w-full px-4 md:w-1/2">
+                  <div className="mb-8">
+                      <label htmlFor="fathers_name" className="mb-3 block text-sm font-medium text-dark dark:text-white">Fathers Name</label>
+                      <input type="text" id="fathers_name" name="fathers_name" value={formData.fathers_name} onChange={handleChange} placeholder="Enter your father's name" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="fathers-name" required  />
+                   
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                  <div className="mb-8">
+                      <label htmlFor="mothers_name" className="mb-3 block text-sm font-medium text-dark dark:text-white">Mothers Name</label>
+                      <input type="text" id="mothers_name" name="mothers_name" value={formData.mothers_name} onChange={handleChange} placeholder="Enter your mother's name" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="mothers-name" required  />
+                    </div>
+                  </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                  <div className="mb-8">
+                      <label htmlFor="current_address" className="mb-3 block text-sm font-medium text-dark dark:text-white">Current Address</label>
+                      <input type="text" id="current_address" name="current_address" value={formData.current_address} onChange={handleChange} placeholder="Enter your current address" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="current-address" required  />
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="aadhar_number" className="mb-3 block text-sm font-medium text-dark dark:text-white">Aadhar Number</label>
+                      <input type="text" id="aadhar_number" name="aadhar_number" value={formData.aadhar_number} onChange={handleChange} placeholder="Enter your aadhar_number" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="aadhar-number" required  />
+                    </div>
+                  </div>
+
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="religion" className="mb-3 block text-sm font-medium text-dark dark:text-white">Religion</label>
+                      <input type="text" id="religion" name="religion" value={formData.religion} onChange={handleChange} placeholder="Enter your religion" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="religion" required  />
+                    
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="gender" className="mb-3 block text-sm font-medium text-dark dark:text-white">Gender</label>
+                      <input type="text" id="gender" name="gender" value={formData.gender} onChange={handleChange} placeholder="Enter your gender (male/female)" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="gender" required  />
+                    
+                    </div>
+                  </div>
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="mother_tongue" className="mb-3 block text-sm font-medium text-dark dark:text-white">Mother Tongue</label>
+                      <input type="text" id="mother_tongue" name="mother_tongue" value={formData.mother_tongue} onChange={handleChange} placeholder="Enter your mother tongue" className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="mother-tongue" required  />
+                    
+                    </div>
+                  </div>
                   <div className="w-full px-4">
-                    <button type="submit" className="rounded-sm bg-dark px-9  py-4 text-base font-medium text-white  hover:bg-[#701a75] dark:shadow-submit-dark">Start Your Journey</button>
+                    <button type="submit" className="rounded-sm bg-dark px-9  py-4 text-base font-medium text-white  hover:bg-[#701a75] dark:shadow-submit-dark">Submit Form</button>
                   </div>
                 </div>
               </form>
