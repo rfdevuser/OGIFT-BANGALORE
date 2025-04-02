@@ -96,6 +96,12 @@ const menuData: Menu[] = [
     path: "/admissions",
     newTab: false,
   },
+  {
+    id: 8,
+    title: "Make Payment",
+    path: "https://rzp.io/l/1NVWmJ2PT1",
+    newTab: false,
+  },
 
 
 
