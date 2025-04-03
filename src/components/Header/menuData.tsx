@@ -102,6 +102,12 @@ const menuData: Menu[] = [
     path: "https://rzp.io/l/1NVWmJ2PT1",
     newTab: false,
   },
+  {
+    id: 8,
+    title: "S I K S H A",
+    path: "https://vimeo.com/1072108185?share=copy#t=0",
+    newTab: false,
+  },
 
 
 
