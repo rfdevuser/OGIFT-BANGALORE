@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import { useState } from 'react';
 import { FormInput } from '@/utils/constants/types'; // Adjust the import path based on your project structure
 import Image from 'next/image';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const LoadingSpinner = () => {
@@ -28,21 +29,55 @@ const Contact = () => {
     current_address:'',
     religion:'',
     gender:'',
-    mother_tongue:''
+    mother_tongue:'',
+    payment_status:'',
+    course_type:'',  
+    student_id:Math.floor(Math.random() * 1000000).toString(),
   });
 
+ 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+       
+       setFormData({ ...formData, [e.target.name]: e.target.value });
+       
+     };
 
+  
+
+  const SendWelcomeMessage = () => {
+    var templateParams = {
+      from_name: 'Onati Global Institue of Fashion Technology (OGIFT)',
+      to_name: formData.lastName,
+      to_email:formData.email,
+      student_id:formData.student_id,
+      course_name:formData.courseInterest,
+      course_type:formData.course_type,
+    }
+
+    emailjs.send('service_7r8sia9', 'template_jo0k8ud', templateParams,'user_QBs08JbvqdXivIagZeWFH')
+      .then(function(response) {
+         console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+         console.log('FAILED...', error);
+      });
+
+
+      return
+  }
+  
+  
   const [submitForm, { loading, error }] = useMutation(ADD_ADMISSION_MUTATION);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+   
     try {
       const { data } = await submitForm({ variables: formData });
-      console.log('Form submitted successfully:', data.submitForm);
-      alert('Form submitted successfully!');
+      console.log('Admission Form submitted successfully:', data.submitForm);
+      
+      SendWelcomeMessage();
+      alert('Admission Form submitted successfully. Email has been sent with your ID. Kindly proceed to make the payment!');
+
       setFormData({
         firstName: '',
         lastName: '',
@@ -58,7 +93,11 @@ const Contact = () => {
         aadhar_number:'',
         religion:'',
         gender:'',
-        mother_tongue:''
+        mother_tongue:'',
+        payment_status:'',
+        course_type:'',
+        student_id:'',
+     
       });
     } catch (error) {
       console.error('Form submission failed:', error);
@@ -66,6 +105,7 @@ const Contact = () => {
     }
   };
 
+  const courseTypes = ['Online', 'Offline'];
   const courses = ['Diploma in Fashion Designing', 'Advance Diploma in Fashion Designing', 
     // 'Vocational Course in Garment making & Tailoring', 
     // 'Vocational Embroidery & Craft Course', 
@@ -206,6 +246,38 @@ const Contact = () => {
                     
                     </div>
                   </div>
+
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="course_tyoe" className="mb-3 block text-sm font-medium text-dark dark:text-white">Course Type</label>
+                      <select id="course_type" name="course_type" value={formData.course_type} onChange={handleChange} className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="courseType" required >
+                        <option value="">Select Course Type</option>
+                        {courseTypes.map((course, index) => (
+                          <option key={index} value={course}>{course}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="payment_status" className="mb-3 block text-sm font-medium text-dark dark:text-white">Payment Status</label>
+                      <input type="text" id="payment_status" name="payment_status" value={formData.payment_status} onChange={handleChange} className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="paymentStatus" />
+                    
+                    </div>
+                  </div>
+
+                  <div className="w-full px-4 md:w-1/2">
+                    <div className="mb-8">
+                      <label htmlFor="student_id" className="mb-3 block text-sm font-medium text-dark dark:text-white">Student ID</label>
+                      <input type="text" id="student_id" name="student_id" value={formData.student_id} onChange={handleChange} className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="studentID" />
+                    
+                    </div>
+                  </div>
+ */}
+
+                   
+
                   <div className="w-full px-4">
                     <button type="submit" className="rounded-sm bg-dark px-9  py-4 text-base font-medium text-white  hover:bg-[#701a75] dark:shadow-submit-dark">Submit Form</button>
                   </div>
