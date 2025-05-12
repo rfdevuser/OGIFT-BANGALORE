@@ -40,6 +40,9 @@ export const ADD_ADMISSION_MUTATION = gql`
     $religion:String!,
     $gender:String!,
     $mother_tongue:String!,
+    $payment_status:String!,
+    $course_type:String!,
+    $student_id:String!
   ) {
     addadmissionmutation(
       input: {
@@ -57,7 +60,32 @@ export const ADD_ADMISSION_MUTATION = gql`
         aadhar_number:$aadhar_number,
         religion:$religion,
         gender:$gender,
-        mother_tongue:$mother_tongue
+        mother_tongue:$mother_tongue,
+        payment_status:$payment_status,
+        course_type:$course_type,
+        student_id:$student_id
+      }
+    ) {
+      testoutput
+    }
+  }
+`;
+
+export const ADD_STUDENT_PAYMENT_MUTATION = gql`
+  mutation AddStudentPayment(
+    $student_id: String!,
+    $payment_amount: String!,
+    $payment_date: String!,
+    $email_id: String!,
+  
+  ) {
+    addstudentpaymentmutation(
+      input: {
+        student_id: $student_id,
+        payment_amount: $payment_amount,
+        payment_date: $payment_date,
+        email_id: $email_id,
+    
       }
     ) {
       testoutput
