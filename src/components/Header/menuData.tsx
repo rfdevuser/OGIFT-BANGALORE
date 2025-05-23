@@ -98,8 +98,9 @@ const menuData: Menu[] = [
   },
   {
     id: 8,
-    title: "Make Payment",
-    path: "https://rzp.io/rzp/xjnVyLC",
+    title: "Make Payment. The Registration Fees are Non-Refundable.",
+    //path: "https://rzp.io/rzp/xjnVyLC",
+    path: "/payments",
     newTab: false,
   },
   {
