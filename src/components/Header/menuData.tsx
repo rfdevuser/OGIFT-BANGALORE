@@ -99,7 +99,7 @@ const menuData: Menu[] = [
   {
     id: 8,
     title: "Make Payment. ",
-    path: "https://rzp.io/l/1NVWmJ2PT1",
+    path: "https://rzp.io/rzp/xjnVyLC",
     // path: "/payments",
     newTab: false,
   },
