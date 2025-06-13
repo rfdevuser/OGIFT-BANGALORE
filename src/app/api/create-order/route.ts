@@ -9,7 +9,7 @@ const razorpay = new Razorpay ({
 
 })
 
-export async function POSt(request: NextRequest){
+export async function POST(request: NextRequest){
   try {
     const order = await razorpay.orders.create({
       amount:100 * 100,
