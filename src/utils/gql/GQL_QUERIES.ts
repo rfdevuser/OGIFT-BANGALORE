@@ -278,3 +278,18 @@ export const GET_CART = gql`
     }
   }
 `;
+
+export const GET_STUDENT = gql`
+query getstudent($search:String) {
+  onestudent(where: {studentID:$search}) {
+    edges {
+      node {
+        firstName
+        lastName
+        student_id
+        
+      }
+    }
+  }
+}
+`;
