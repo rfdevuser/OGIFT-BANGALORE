@@ -5,7 +5,9 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 
 const client = new ApolloClient({
-  uri: 'https://www.onatiglobal.com/graphql', 
+  // uri: 'https://www.onatiglobal.com/graphql', 
+   uri: "https://www.newogwebsite.com?graphql=true",
+  
   cache: new InMemoryCache(),
 });
 
