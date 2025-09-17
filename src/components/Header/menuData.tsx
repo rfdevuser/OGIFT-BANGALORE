@@ -107,7 +107,7 @@ const menuData: Menu[] = [
     id: 9,
     title: "Join Community",
     //path: "",
-    path: "https://tasseltip-communit.vercel.app/",
+    path: "https://tasseltip-community.vercel.app/",
     newTab: false,
   },
 
@@ -120,4 +120,5 @@ if (!menuData || menuData.length === 0) {
   window.location.href = '/error'; // Change '/error' to the actual path of your error page
 
 }
+
 
