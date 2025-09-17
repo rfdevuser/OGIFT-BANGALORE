@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   const newsItems = [
-    { title: 'New fashion design course for 2024-2025 batch starting next month! Enroll now!' },
-    { title: 'Admission open - 2024-2025' },
-    { title: 'Admission open - 2024-2025' },
-    {title: 'Admission open - 2024-2025'}
+    { title: 'New fashion design course for 2025-2026 batch starting next month! Enroll now!' },
+    { title: 'Admission open - 2025-2026' },
+    { title: 'Admission open - 2025-2026' },
+    {title: 'Admission open - 2025-2026'}
     // Add more news items as needed
   ];
   return (
