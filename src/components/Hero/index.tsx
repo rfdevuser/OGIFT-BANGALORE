@@ -23,7 +23,7 @@ const Hero = () => {
   ];
 
   const newsItems = [
-    { title: 'New fashion design course for 2024-2025 batch starting next month! Enroll now!' },
+    { title: 'New fashion design course for 2025-26 batch starting next month! Enroll now!' },
     { title: 'Internship opportunities available at top fashion houses. Apply now!' },
     { title: 'Learn from industry experts at our upcoming workshop series.' },
     {title: 'Exciting new collection launch next week! Stay tuned for updates.'}
