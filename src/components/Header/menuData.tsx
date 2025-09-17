@@ -105,9 +105,9 @@ const menuData: Menu[] = [
   },
   {
     id: 8,
-    title: "S I K S H A",
-    path: "https://vimeo.com/1072108185?share=copy#t=0",
-    newTab: false,
+    title: "Community",
+    path: "https://tasseltip-community.vercel.app",
+    newTab: true,
   },
 
 
