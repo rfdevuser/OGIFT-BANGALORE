@@ -19,7 +19,7 @@ const TickerWrapper: React.FC<TickerWrapperProps> = ({newsItems}) => {
       {newsItems.map((item, index)=>(
         <div key={index} className="hitem">{item.title}</div>
       ))}
-      <div className="hitem">New fashion design course for 2024-2025 batch starting next month! Enroll now!</div>
+      <div className="hitem">New fashion design course for 2025-2026 batch starting next month! Enroll now!</div>
       <div className="hitem">Internship opportunities available at top fashion houses. Apply now!</div>
       <div className="hitem">Learn from industry experts at our upcoming workshop series.</div>
       <div className="hitem">Exciting new collection launch next week! Stay tuned for updates.</div>
