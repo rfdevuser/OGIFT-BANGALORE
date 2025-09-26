@@ -163,7 +163,7 @@ const Header = () => {
                           fill="currentColor"
                         />
                       </svg>
-                       <a href="https://www.newogwebsite.com/OGIFTVideos/ogift.apk"download="ogift.apk">Download App</a>
+                       
                     </span>
                   </p>
                   <div
@@ -215,6 +215,7 @@ const Header = () => {
 
 
 export default Header;
+
 
 
 
