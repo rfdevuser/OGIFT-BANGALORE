@@ -195,7 +195,7 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-                 <a href="file.pdf" download="example.pdf">Download App</a>
+                 <a href="file.pdf" download="https://www.ognewwebsite.com/OGIFTVideos/ogift.apk">Download App</a>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <ThemeToggler />
@@ -210,3 +210,4 @@ const Header = () => {
 
 
 export default Header;
+
