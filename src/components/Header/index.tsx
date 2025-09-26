@@ -112,7 +112,7 @@ const Header = () => {
             </div>
             <div className="flex w-full items-center justify-between px-1">
               <div>
-                 <a href="https://www.newogwebsite.com/OGIFTVideos/ogift.apk" download="ogift.apk">   Download App</a>
+                
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -197,6 +197,7 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
+                   <a href="https://www.newogwebsite.com/OGIFTVideos/ogift.apk" download="ogift.apk">   Download App</a>
                 </nav>
                 
               </div>
@@ -214,6 +215,7 @@ const Header = () => {
 
 
 export default Header;
+
 
 
 
