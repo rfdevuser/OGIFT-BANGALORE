@@ -93,6 +93,28 @@ export const ADD_STUDENT_PAYMENT_MUTATION = gql`
   }
 `;
 
+export const ADD_OGIFT_APP_DOWNLOAD_MUTATION = gql`
+  mutation addogiftappdownloadmutation(
+    $name: String!,
+    $email: String!,
+    $phone: String!,
+    
+  
+  ) {
+    addogiftappdownloadmutation(
+      input: {
+        name: $name,
+        email: $email,
+        phone: $phone,
+        
+    
+      }
+    ) {
+      testoutput
+    }
+  }
+`;
+
 
 export const ADD_STUDENT_CONTACT_MUTATION = gql`
   mutation AddStudentContact(
