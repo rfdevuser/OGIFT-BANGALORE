@@ -197,7 +197,7 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                   <a href="https://www.newogwebsite.com/OGIFTVideos/ogift.apk" download="ogift.apk">   Download Android App</a>
+                  
                 </nav>
                 
               </div>
@@ -215,6 +215,7 @@ const Header = () => {
 
 
 export default Header;
+
 
 
 
