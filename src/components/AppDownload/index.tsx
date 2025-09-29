@@ -169,6 +169,7 @@ const Contact = () => {
           
         </div>
         <label>Link to download the Android App is below</label>
+        <p></p>
          { download ? <a style={{color:'white',background:'blue'}} href="https://newogwebsite.com/OGIFTVideos/ogift.apk">Download The Android App</a>:''}
       </div>
     </section>
