@@ -104,16 +104,16 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 8,
+    id: 9,
     title: "Community",
     path: "https://tasseltip-community.vercel.app",
     newTab: true,
   },
    {
-    id: 8,
-    title: "App Download",
-    path: "/AppDownload",
-    newTab: true,
+    // id: 10,
+    // title: "App Download",
+    // path: "/AppDownload",
+    // newTab: true,
   },
 
 
@@ -124,4 +124,5 @@ export default menuData;
 if (!menuData || menuData.length === 0) {
   // If menuData is not loaded, redirect to the error page
   window.location.href = '/error'; // Change '/error' to the actual path of your error page
+
 }
