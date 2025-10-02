@@ -6,7 +6,7 @@ import { FormInput } from '@/utils/constants/types'; // Adjust the import path b
 import Image from 'next/image';
 import emailjs from 'emailjs-com';
 import { generateAESKey, encryptAES, decryptAES } from 'web-secure-encryption';
-
+import { useNavigate } from "react-router-dom";
 
 var download = false;
 
@@ -106,7 +106,7 @@ const Contact = () => {
       
       //SendWelcomeMessage();
       alert('Thanks for Downloading The App. Your details have been submitted.');
-
+      
       setFormData({
         name: '',
         email: '',
@@ -120,6 +120,23 @@ const Contact = () => {
     }
   };
 
+ const handleDownload = () =>
+ {
+  
+  const link = document.createElement('a');
+  link.href = 'https://www.newogwebsite.com/OGIFTVideos/ogift.apk'; // Replace with your file path or URL
+  link.download = 'ogift.apk'; // Desired file name
+ 
+  document.body.appendChild(link);
+  link.click();
+
+  var btn = document.getElementById("downloadbutton");
+  //btn.setAttribute("disabled","disabled")
+  btn.style.display = "none"
+
+  document.body.removeChild(link);
+  
+ }
 
   return (
     <section id="contact" className="overflow-hidden py-2 md:py-2 lg:py-2">
@@ -158,7 +175,7 @@ const Contact = () => {
                    
 
                   <div className="w-full px-4">
-                    <button type="submit" className="rounded-sm bg-dark px-9  py-4 text-base font-medium text-white  hover:bg-[#701a75] dark:shadow-submit-dark">Submit Form</button>
+                    <button type="submit"  className="rounded-sm bg-dark px-9  py-4 text-base font-medium text-white  hover:bg-[#701a75] dark:shadow-submit-dark">Submit Form</button>
                   </div>
                 </div>
               </form>
@@ -168,11 +185,21 @@ const Contact = () => {
         
           
         </div>
+        {
+          download ?
+        <div>
         <label>Link to download the Android App is below</label>
         <p></p>
-         { download ? <a style={{color:'white',background:'blue'}} href="https://newogwebsite.com/OGIFTVideos/ogift.apk">Download The Android App</a>:''}
+       
+         <button id="downloadbutton" style={{backgroundColor:'blue',color:'white'}} onClick={handleDownload}>Download File</button>
+        </div>
+        :''}
+        
+          
       </div>
+        
     </section>
+   
   );
 };
 
