@@ -112,7 +112,6 @@ const Header = () => {
             </div>
             <div className="flex w-full items-center justify-between px-1">
               <div>
-                
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -143,6 +142,7 @@ const Header = () => {
             ? "visibility top-full opacity-100"
             : "invisible top-[120%] opacity-0"
         }`}
+
       >
         <ul className="block lg:flex lg:space-x-12">
           {menuData.map((menuItem, index) => (
@@ -163,7 +163,6 @@ const Header = () => {
                           fill="currentColor"
                         />
                       </svg>
-                       
                     </span>
                   </p>
                   <div
@@ -195,11 +194,12 @@ const Header = () => {
                 </Link>
                         )}
                       </li>
+                      
                     ))}
                   </ul>
-                  
+                   {/* <a href="file.pdf" download="example.pdf">Download App</a> */}
+                   {/* <a href="https://newogwebsite.com/sdm_downloads/siksha-download-page">Download App</a> */}
                 </nav>
-                
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <ThemeToggler />
@@ -207,26 +207,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-        
       </header>
     </>
   );
 };
 
-
 export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
