@@ -6,7 +6,7 @@ import { FormInput } from '@/utils/constants/types'; // Adjust the import path b
 import Image from 'next/image';
 import emailjs from 'emailjs-com';
 import { generateAESKey, encryptAES, decryptAES } from 'web-secure-encryption';
-import { useNavigate } from "react-router-dom";
+
 
 var download = false;
 
@@ -204,3 +204,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
