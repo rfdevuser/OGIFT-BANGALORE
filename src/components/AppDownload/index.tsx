@@ -124,7 +124,7 @@ const Contact = () => {
  {
   
   const link = document.createElement('a');
-  link.href = 'https://www.newogwebsite.com/OGIFTVideos/siksha.apk'; // Replace with your file path or URL
+  link.href = 'https://www.newogwebsite.com/OGIFTVideos/ogift.apk'; // Replace with your file path or URL
   link.download = 'ogift.apk'; // Desired file name
  
   document.body.appendChild(link);
@@ -204,5 +204,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
