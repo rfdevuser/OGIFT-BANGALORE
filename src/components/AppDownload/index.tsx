@@ -91,11 +91,11 @@ const Contact = () => {
       alert("Not a valid phone number")
       return
     }
-    // if(localStorage.getItem('1124')){
-    //   alert('You have exceeded the maximum number of downloads')
-    //   download = false;
-    //   return
-    // }
+    if(localStorage.getItem('1124')){
+      alert('You have exceeded the maximum number of downloads')
+      download = false;
+      return
+    }
     try {
       const { data } = await submitForm({ variables: formData });
       
@@ -204,6 +204,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
 
