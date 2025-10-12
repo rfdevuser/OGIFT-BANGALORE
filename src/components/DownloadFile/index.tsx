@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { FormInput } from '@/utils/constants/types'; // Adjust the import path based on your project structure
 import Image from 'next/image';
 import emailjs from 'emailjs-com';
-import { generateAESKey, encryptAES, decryptAES } from 'web-secure-encryption';
-import { useNavigate } from "react-router-dom";
+// import { generateAESKey, encryptAES, decryptAES } from 'web-secure-encryption';
+// import { useNavigate } from "react-router-dom";
 
 var download = false;
 
@@ -24,27 +24,27 @@ const Contact = () => {
    
   });
 
-  const encrypt_key = async () =>
-  {
-    // Generate AES Key
-    const aesKey = await generateAESKey(256); // 256-bit key
+  // const encrypt_key = async () =>
+  // {
+  //   // Generate AES Key
+  //   const aesKey = await generateAESKey(256); // 256-bit key
 
-    // Encrypt data
-    const plaintext = "Rokolexus#123";
-    const encryptedData = await encryptAES(plaintext, aesKey);
+  //   // Encrypt data
+  //   const plaintext = "Rokolexus#123";
+  //   const encryptedData = await encryptAES(plaintext, aesKey);
 
-    console.log('Encrypted Data:', encryptedData);
+  //   console.log('Encrypted Data:', encryptedData);
 
-    // Decrypt data
-    const decryptedData = await decryptAES(encryptedData, aesKey);
-    console.log('Decrypted Data:', decryptedData);
+  //   // Decrypt data
+  //   const decryptedData = await decryptAES(encryptedData, aesKey);
+  //   console.log('Decrypted Data:', decryptedData);
 
-    if(!localStorage.getItem('1124')){
-    localStorage.setItem('1124',encryptedData)
+  //   if(!localStorage.getItem('1124')){
+  //   localStorage.setItem('1124',encryptedData)
     
-    }
+  //   }
    
-  }
+  // }
  
  
 
@@ -99,7 +99,7 @@ const Contact = () => {
       const { data } = await submitForm({ variables: formData });
       
       console.log('Admission Form submitted successfully:', data.submitForm);
-      encrypt_key()
+      // encrypt_key()
       SendthankyouMessage()
       download = true;
       
@@ -124,7 +124,7 @@ const Contact = () => {
   
   const link = document.createElement('a');
   link.href = 'https://www.newogwebsite.com/OGIFTVideos/ogiftanuradha.apk'; // Replace with your file path or URL
-  link.download = 'ogift.apk'; // Desired file name
+  link.download = 'ogiftanuradha.apk'; // Desired file name
  
   document.body.appendChild(link);
   link.click();
