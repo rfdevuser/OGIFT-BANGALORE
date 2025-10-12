@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import DownloadApp from "@/components/AppDownload";
+import DownloadApp from "@/components/DownloadApp";
 
 import { Metadata } from "next";
 import SectionTitle from "@/components/Common/SectionTitle";
