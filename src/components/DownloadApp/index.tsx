@@ -1,3 +1,4 @@
+"use client"
 import { ADD_OGIFT_APP_DOWNLOAD_MUTATION } from '@/utils/gql/GQL_MUTATIONS';
 import { useMutation } from '@apollo/client';
 import { useState } from 'react';
