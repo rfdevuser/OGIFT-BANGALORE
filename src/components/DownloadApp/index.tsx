@@ -96,7 +96,7 @@ const Contact = () => {
  {
   
   const link = document.createElement('a');
-  link.href = 'https://www.newogwebsite.com/OGIFTVideos/ogiftAnuradha.apk'; // Replace with your file path or URL
+  link.href = 'https://www.newogwebsite.com/OGIFTVideos/ogiftdemo.apk'; // Replace with your file path or URL
   link.download = 'ogiftanuradha.apk'; // Desired file name
  
   document.body.appendChild(link);
