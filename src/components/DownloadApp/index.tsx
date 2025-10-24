@@ -120,7 +120,9 @@ const Contact = () => {
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Download The Android App Now
               </h2>
-            
+             <h4 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                Submit form below and scroll down for Download button
+              </h4>
             
                 <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
