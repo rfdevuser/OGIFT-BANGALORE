@@ -47,9 +47,9 @@ const ContactPage = () => {
         {/* Address Section */}
         <div className="text-xl">
           <p className="font-bold mb-2">Address:</p>
-          <p>No 4 5th Main 1st Cross B Block,</p>
-          <p>4th Main Vinayakanagar ,</p>
-          <p>Bengaluru, Karnataka 560017</p>
+          <p>No 95/2 Jesu Krupa Complex,</p>
+          <p>1st Floor, Above Canara Bank ,</p>
+          <p>Old Airport Road, Bangalore, Karnataka 560017</p>
           <h1>Email: admissions@ogiftbangalore.com</h1>
             <p></p><h1>Contact Us : +91 90369 28799</h1>
         </div>
