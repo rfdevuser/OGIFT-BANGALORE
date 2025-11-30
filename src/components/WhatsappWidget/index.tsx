@@ -7,7 +7,7 @@ const image = "/images/logo/onatigloballogo.svg"
 const WhatsAppWeget = () => {
   return (
     <WhatsAppWidget
-      phoneNo="+919036928800"
+      phoneNo="+919036928799"
       position="right"
       widgetWidth="300px"
       widgetWidthMobile="260px"
