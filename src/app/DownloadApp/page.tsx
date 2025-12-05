@@ -30,8 +30,7 @@ const ContactPage = () => {
           <div className="flex flex-col items-center">
             <SectionTitle
               title="Download The Android App"
-              paragraph="Welcome to the vibrant community of OGIFT, where your passion for creativity meets unparalleled opportunities for growth and learning.
-              Kindly Note that the registrations fees are non-refundable."
+              paragraph="Welcome to the vibrant community of OGIFT, where your passion for creativity meets unparalleled opportunities for growth and learning."
               center
             />
             <DownloadApp />
