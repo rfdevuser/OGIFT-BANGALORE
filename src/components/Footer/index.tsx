@@ -75,10 +75,11 @@ const Footer: React.FC = () => {
           <div className=" mt-2">  <p className="mb-4 text-sm text-black dark:text-black">
              <strong> Institute Address</strong>
             </p>
-            <p>No 4 5th Main 1st Cross B Block,</p>
-            <p>4th Main Vinayakanagar,</p>
-            <p>Bengaluru 17, Karnataka</p>
-            <h1>Email: admissions@ogiftbangalore.com</h1>
+           <p className="font-bold mb-2">Address:</p>
+          <p>No 95/2 Jesu Krupa Complex,</p>
+          <p>1st Floor, Above Canara Bank ,</p>
+          <p>Old Airport Road, Bangalore, Karnataka 560017</p>
+          <h1>Email: admissions@ogiftbangalore.com</h1>
             <p></p><h1>Contact Us : +91 90369 28799</h1>
             </div>
           <div className="mx-auto sm:mx-30 md:mx-30"> 
