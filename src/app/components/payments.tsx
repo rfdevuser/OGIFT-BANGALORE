@@ -1,6 +1,7 @@
 'use client'
 import React,{use, useState} from 'react'
-
+import { useMutation, useQuery } from '@apollo/client';
+import { ADD_STUDENT_PAYMENT_MUTATION} from '@/utils/gql/GQL_MUTATIONS';
 import Script from 'next/script';
 
 
@@ -13,7 +14,48 @@ declare global {
  
 }
 
+
+
+
+
 const PaymentPage = (formdata:any) => {
+  const [submitForm, { loading, error }] = useMutation(ADD_STUDENT_PAYMENT_MUTATION);
+
+   const [insertform, setFormData] = useState({
+    student_id:'',
+    payment_amount:'',
+    payment_date:'',
+    email_id: ''
+    
+  });
+
+  const handleInsert = async () => {
+  
+   
+    try {
+      
+      const { data } = await submitForm({ variables: insertform });
+      
+      console.log('Form submitted successfully:', data.submitForm);
+      
+      alert('Payment Details Captured!');
+      setFormData({
+       student_id:'', 
+       payment_amount:'',
+       payment_date:'',
+       email_id: ''
+     
+      });
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      alert('Error submitting form. Please try again later.');
+    }
+  };
+  insertform.student_id = formdata.formdata.studentid;
+  insertform.payment_amount = formdata.formdata.amount
+  insertform.payment_date = formdata.formdata.date
+  insertform.email_id = formdata.formdata.email_id
+
   // console.log(formdata.formdata.amount)
   const AMOUNT = formdata.formdata.amount
   const [isProcessing, setIsProcessing] = useState(false)
@@ -40,7 +82,7 @@ const PaymentPage = (formdata:any) => {
         
         handler : function (response:any){
           console.log("payment successfull",response)
-          
+          handleInsert()
         },
         prefill:{
           name:"john Doe",
@@ -55,8 +97,10 @@ const PaymentPage = (formdata:any) => {
       rzp1.open()
     }catch(error){
       console.error("payment failed",error)
+      
     } finally {
       setIsProcessing(false)
+      
       window.history.back()
     }
   }

@@ -8,10 +8,14 @@ import PaymentPage from './payments';
 
 
 
+
+
 function CheckStudent ({studentid})
 {
     const [formData, setFormData] = useState({
-    
+
+    studentid:studentid,
+    date:new Date(),
     amount : 0.00,
     reference : '',
     email_id : '',
@@ -61,6 +65,16 @@ console.log(data)
          <div className="-mx-4 flex flex-wrap">
                   <div >
                     <p>Payment Details</p>
+                     <div className="mb-8" contentEditable="false">
+                      <label htmlFor="studentid" className="mb-3 block text-sm font-medium text-dark dark:text-white">Enter Student ID</label>
+                      <input type="text" id="studentid" name="reference" value={formData.studentid} onChange={handleChange} placeholder="Enter Student ID " className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="reference"  />
+                     
+                    </div>
+                    <div className="mb-8" contentEditable="false">
+                      <label htmlFor="date" className="mb-3 block text-sm font-medium text-dark dark:text-white">Enter Payment Date</label>
+                      <input type="text" id="date" name="date" value={formData.date.toString()} onChange={handleChange} placeholder="Enter Payment Date " className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="reference" required />
+                     
+                    </div>
                     <div className="mb-8">
                       <label htmlFor="reference" className="mb-3 block text-sm font-medium text-dark dark:text-white">Enter Payment Reference</label>
                       <input type="text" id="reference" name="reference" value={formData.reference} onChange={handleChange} placeholder="Enter Payment Reference " className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none" autoComplete="reference" required />
