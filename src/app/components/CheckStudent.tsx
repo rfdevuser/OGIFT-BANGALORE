@@ -56,7 +56,7 @@ console.log(data)
     
  
         {data ? 
-        <div>
+        <div className="pt-20">
         <h2>First Name :{data.onestudent.edges[0].node.firstName}</h2>
         <h2>Last Name  : {data.onestudent.edges[0].node.lastName}</h2>
         <h2>Student ID : {data.onestudent.edges[0].node.student_id}</h2>
@@ -109,3 +109,4 @@ console.log(data)
 }
 
 export default CheckStudent;
+
