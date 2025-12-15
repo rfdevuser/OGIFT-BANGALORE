@@ -36,7 +36,7 @@ if (flag){
        
        
        <form onSubmit={(e)=>{e.preventDefault();handleSubmit(e);}}>
-         <div className="-mx-4 flex flex-wrap">
+         <div className="-mx-4 flex flex-wrap p-15">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
                       <label htmlFor="student_id" className="mb-3 block text-sm font-medium text-dark dark:text-white">Enter Student ID</label>
@@ -55,3 +55,4 @@ if (flag){
     </div>
   )
  }
+
